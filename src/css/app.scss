@@ -1,0 +1,101 @@
+@font-face {
+    font-family: badScript;
+    src: url(/fonts/BadScript-Regular.ttf);
+  }
+
+h1,h2,h3,h4,h5,h6{margin:24px 0}
+h5, h6{margin: 6px}
+a{text-decoration: none;color: #fff}
+a:hover {text-decoration: underline}
+a.router-link-exact-active .q-focus-helper {background: currentColor; opacity:0.15;}
+aside .q-focus-helper, aside .q-item {transition: none !important;}
+aside a:hover {text-decoration: none;}
+h5 a {text-transform: uppercase; display: inline-block;}
+h6 a {text-transform: capitalize; display: inline-block;}
+em {font-size:16px; font-weight:400; color: rgb(10, 10, 10)}
+
+h1 {font-family: 'badScript'; font-size:25px; margin: 0; padding:0; line-height: 1; text-align: center; font-weight: 700;}
+.q-header span {font-family: 'badScript'; font-size:16px}
+
+body {background-color: #4f4f57;}
+
+.q-header {background: #939191;color:#1d1d1d;}
+.q-toolbar {width:60px; color:#1d1d1d;}
+
+.title{
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    background: #f0f0f0;
+    position: fixed;
+    bottom:0;
+    margin: auto;
+    width: 100%;
+    z-index: 1;
+    padding: 6px 16px;
+    background: #939191;
+}
+
+.q-field__inner {background: #fff}
+
+.links {margin:auto}
+.links .q-btn {min-width:100px; margin:21px 8px}
+.inputsExam {margin-bottom:40px}
+.inputsExam .q-input {margin-bottom:20px}
+
+.q-icon {font-size:22px; margin-right:6px}
+
+
+// WP TABLE
+
+.wp-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.wp-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.wp-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.wp-table th:first-child, 
+.wp-table td:first-child {
+    padding-left: 16px;
+}
+
+
+.wp-table td, 
+.wp-table th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    text-transform: capitalize;
+}
+
+.wp-table th {
+    font-weight: bold;
+}
+ 
+.wp-table {
+    font-size: 13px!important;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+.wp-table td span:hover {cursor:pointer;}
+// END WP TABLE

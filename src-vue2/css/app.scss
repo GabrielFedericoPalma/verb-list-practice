@@ -1,0 +1,45 @@
+// app global css in SCSS form
+
+h1,h2,h3,h4,h5,h6{margin:24px 0}
+h5, h6{margin: 6px}
+a{text-decoration: none;color: #fff}
+a:hover {text-decoration: underline}
+aside.q-drawer a:hover {text-decoration: none}
+h5 a {text-transform: uppercase; display: inline-block;}
+h6 a {text-transform: capitalize; display: inline-block;}
+em {font-size:16px; font-weight:400; color: gray}
+
+.q-header {background: #939191}
+.q-toolbar {width:60px}
+
+.title{
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    background: #f0f0f0;
+    position: fixed;
+    bottom:0;
+    margin: auto;
+    width: 100%;
+    z-index: 1;
+    padding: 6px 16px;
+    background: #939191;
+}
+
+.links {margin:auto}
+.links .q-btn {min-width:100px; margin:21px 8px}
+.inputsExam {margin-bottom:40px}
+.inputsExam .q-input {margin-bottom:20px}
+
+.q-icon {font-size:22px; margin-right:6px}
+
+.q-page aside {padding:16px; border: 1px dashed gray; margin: 0 auto 16px auto; text-align: left; max-width:400px;}
