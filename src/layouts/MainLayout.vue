@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf" :key="updated" >
-    
+
     <q-header elevated class="row justify-between items-center" >
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="drawer = !drawer" />
@@ -13,12 +13,12 @@
           <img src="/app-icons/arg-flag.png" alt="" />
         </div>
       </div>
-        <p><small>v 1.0.0</small></p>
+        <p><small>v 1.1.1</small></p>
     </q-header>
 
    <!-- ***** MENU LATERAL ***** -->
   <q-drawer v-model="drawer" show-if-above bordered class="bg-black" >
-        
+
       <q-list style="padding-top:16px" >
 
         <router-link to="/" >
@@ -44,7 +44,7 @@
         </router-link>
 
       </q-list>
-      
+
     </q-drawer>
     <!-- ******* END MENU LATERAL ******* -->
 
@@ -86,7 +86,7 @@ export default {
       indexNumber: 0,
       isABCIndex: false,
       init: 0,
-      store: firebase_db_store()    
+      store: firebase_db_store()
     }
   },
   methods: {
@@ -100,7 +100,7 @@ export default {
         firebase_db_store().pagination(to)
 
         window.scrollTo(0, 0);
-    
+
     }
   },
   computed: {
@@ -133,7 +133,7 @@ export default {
         const letters = this.store.ABCIndex
         const lettersLength = letters.length
         // const qPaginationClass = document.getElementsByClassName('q-pagination');
-        
+
         const buttonsFromIndex = document.querySelectorAll('div.q-pagination__middle.row button')
 
         // console.log(buttonsFromIndex[2].innerText = '2')
@@ -143,13 +143,13 @@ export default {
 
           // console.log(buttonsFromIndex[i].innerText)
         }
-       
+
         this.init = 1
       }
 
   }
 }
-</script> 
+</script>
 
 <style scoped >
 .q-header {padding:16px 16px 6px 16px}
