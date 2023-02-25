@@ -13,7 +13,7 @@
           <img src="/app-icons/arg-flag.png" alt="" />
         </div>
       </div>
-        <p><small>v 1.1.1</small></p>
+        <p><small>v 1.1.2</small></p>
     </q-header>
 
    <!-- ***** MENU LATERAL ***** -->
