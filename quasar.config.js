@@ -150,7 +150,16 @@ module.exports = configure(function (/* ctx */) {
       // extendGenerateSWOptions (cfg) {}
       // extendInjectManifestOptions (cfg) {},
       // extendManifestJson (json) {}
-      // extendPWACustomSWConf (esbuildConf) {}
+      // extendPWACustomSWConf (esbuildConf) {},
+      manifest: {
+        name: `Verbs practice`,
+        short_name: `Verbs practice`,
+        description: `Irregular verbs practicing`,
+        display: 'standalone',
+        orientation: 'portrait',
+        background_color: '#000000',
+        theme_color: '#000000',
+      }
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
