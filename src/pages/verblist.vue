@@ -43,6 +43,7 @@ export default {
           <td>{{ item.SPANISH }}</td>
         </tr>
       </table>
+      <p v-if="!verbList.length" class="q-mt-md text-white text-center" >Getting Verb List...</p>
       <!-- END VERB LIST -->
 
     </div>

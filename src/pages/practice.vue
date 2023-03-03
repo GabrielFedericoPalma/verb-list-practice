@@ -47,7 +47,7 @@
 
               <div style="width:100%; display:flex; justify-content: flex-end" >
                 <div>
-                  <small style="display:inline-block; margin-right:33px;color: #8b5353;" v-if="answer==index" >
+                  <small style="display:inline-block; margin-right:33px;color: #8b5353;" v-show="store.answer==index" >
                     <q-icon name="volume_up" color="primary" @click="alert()" /><a href="#" @click.prevent="voice($event)" title="Listen it" >{{item.INFINITIVE}} - {{item.PAST}} - {{item.PARTICIPLE}}</a>
                   </small>
                   <q-btn label="answer" color="primary" @click="toggleAnswer(index)" />
@@ -75,20 +75,17 @@ export default {
   components:{},
   data () {
     return {
-      answer: -1,
-      modelInput:{}
+      modelInput:{},
+      store: firebase_db_store()
     }
-  },
-  created(){
-
   },
   methods: {
     toggleAnswer(index){
       // console.log(index, this.answer)
-      if(index === this.answer){
-        this.answer = -1
+      if(index === this.store.answer){
+        this.store.answer = -1
       }else{
-        this.answer = index
+        this.store.answer = index
       }
     }
   },

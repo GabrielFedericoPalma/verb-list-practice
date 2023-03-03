@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf" :key="updated" >
 
-    <q-header elevated class="row justify-between items-center" >
+    <q-header reveal elevated class="row justify-between items-center" >
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="drawer = !drawer" />
       </q-toolbar>
@@ -13,7 +13,7 @@
           <img src="/app-icons/arg-flag.png" alt="" />
         </div>
       </div>
-        <p><small>v 1.1.3</small></p>
+        <p><small>v 1.1.4</small></p>
     </q-header>
 
    <!-- ***** MENU LATERAL ***** -->

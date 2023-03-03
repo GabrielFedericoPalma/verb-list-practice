@@ -2,16 +2,17 @@ import { defineStore } from 'pinia';
 
 export const firebase_db_store = defineStore('firebase_db_store', {
   state: () => ({
-    ABCIndex: [],  
+    ABCIndex: [],
     dataGlobal: [],
     verbList: [],
     dataResult: [],
     dataFirstLetters: null,
-    updated: false
+    updated: false,
+    answer: -1
   }),
   getters: {
   },
-  
+
   actions: {
     getFirebaseToStore(data) {
       // console.log('Pinia: ', data)
@@ -44,8 +45,8 @@ export const firebase_db_store = defineStore('firebase_db_store', {
       for(let i = 0; i<dataGlobalLength; i++){
           arrFirstLetters.push(dataGlobal[i].INFINITIVE.charAt(0))
       }
-      
-      this.dataFirstLetters = arrFirstLetters 
+
+      this.dataFirstLetters = arrFirstLetters
 
       // console.log('this.dataFirstLetters: ', this.dataFirstLetters);
 
@@ -61,21 +62,21 @@ export const firebase_db_store = defineStore('firebase_db_store', {
       // console.log('state.dataResult: ',state.dataResult)
     },
     pagination (to) {
-        
+
         // console.log('Pagi', to)
-    
+
         let index = to-1
         // to = state.ABCIndex[index]
-        let dataGlobal = this.dataGlobal 
+        let dataGlobal = this.dataGlobal
         // let pagination = null
         //Modelo del for verbList
         // state.verbList = state.dataGlobal.slice(0,3);
         // console.log('To: ',typeof to)
         // console.log('state.dataGlobal Pag: ',state.dataGlobal)
         // console.log('state.verbList: ',state.verbList)
-    
+
         if(typeof to == 'string'){
-    
+
           for(let i = 0; i<dataGlobal.length; i++){
             // console.log(state.dataFirstLetters[i])
             if(to==this.dataFirstLetters[i]){
@@ -84,18 +85,21 @@ export const firebase_db_store = defineStore('firebase_db_store', {
                 // console.log('value: ',value.INFINITIVE.charAt(0));
                 return value.INFINITIVE.charAt(0) == to
               })
-              // value => value.INFINITIVE == 'a')      
-            }  
+              // value => value.INFINITIVE == 'a')
+            }
           }
-    
+
+          // Clear Answers
+          this.answer = -1
+
           // state.verbList = pagination
           // console.log('state.verbList: ',state.verbList)
-    
+
         }
-    
-    }, 
+
+    },
     update (boolean) {
-      this.updated = boolean 
+      this.updated = boolean
     },
   },
 });
